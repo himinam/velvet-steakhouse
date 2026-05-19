@@ -18,6 +18,7 @@
 </head>
 
 <body>
+    <div id="tsparticles"></div>
 
 <!-- LOADER -->
 
@@ -37,6 +38,9 @@
 
 <header>
 
+    <div class="menu-toggle" id="menuToggle">
+    ☰
+</div>
     <div class="logo">
         Velvet Steakhouse
     </div>
@@ -63,7 +67,7 @@
 
     <div class="hero-content">
 
-        <h1>Experiencia Gourmet Premium</h1>
+        <h1 id="typingText"></h1>
 
         <p>
             Carnes premium, ambiente elegante y sabores inolvidables.
@@ -295,10 +299,10 @@
 
     <h2>Ubicación</h2>
 
-    <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18"
-    allowfullscreen=""
-    loading="lazy">
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.866394865502!2d-74.072092!3d4.7110!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f99a9c6b8b5e7%3A0x123456789!2sBogot%C3%A1!5e0!3m2!1ses!2sco!4v1715555555555"
+        allowfullscreen=""
+        loading="lazy">
     </iframe>
 
 </section>
@@ -396,6 +400,56 @@ counters.forEach(counter => {
 });
 
 </script>
+<div class="lightbox" id="lightbox">
 
+    <span id="cerrarLightbox">×</span>
+
+    <img id="lightboxImg">
+
+</div>
+<div class="cursor"></div>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+<audio id="clickSound" src="click.mp3"></audio>
+<!-- BOTON CHAT IA -->
+
+<div class="chat-toggle" id="chatToggle">
+
+    💬
+
+</div>
+
+<!-- CHAT IA -->
+
+<div class="chatbot" id="chatbot">
+
+    <div class="chat-header">
+
+        <h3>Velvet AI</h3>
+
+        <span id="cerrarChat">✖</span>
+
+    </div>
+
+    <div class="chat-body" id="chatBody">
+
+        <div class="bot-message">
+            👋 Hola, soy el asistente virtual de Velvet Steakhouse.
+        </div>
+
+    </div>
+
+    <div class="chat-input">
+
+        <input 
+        type="text" 
+        id="chatInput"
+        placeholder="Escribe un mensaje..."
+        >
+
+        <button id="sendBtn">Enviar</button>
+
+    </div>
+
+</div>
 </body>
 </html>
