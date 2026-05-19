@@ -13,9 +13,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 </head>
 
 <body>
+
+<!-- LOADER -->
+
+<div id="loader">
+
+    <div class="loader-content">
+
+        <h1>Velvet Steakhouse</h1>
+
+        <div class="spinner"></div>
+
+    </div>
+
+</div>
 
 <!-- NAVBAR -->
 
@@ -29,8 +45,10 @@
 
         <a href="#inicio">Inicio</a>
         <a href="#menu">Menú</a>
+        <a href="#especialidades">Especialidades</a>
         <a href="#galeria">Galería</a>
         <a href="#nosotros">Nosotros</a>
+        <a href="#testimonios">Opiniones</a>
         <a href="#reservas">Reservas</a>
 
     </nav>
@@ -105,6 +123,63 @@
 
 </section>
 
+<!-- ESTADISTICAS -->
+
+<section class="stats">
+
+    <div class="stat">
+        <h2 class="counter" data-target="15">0</h2>
+        <p>Años de experiencia</p>
+    </div>
+
+    <div class="stat">
+        <h2 class="counter" data-target="120">0</h2>
+        <p>Platos premium</p>
+    </div>
+
+    <div class="stat">
+        <h2 class="counter" data-target="5000">0</h2>
+        <p>Clientes felices</p>
+    </div>
+
+</section>
+
+<!-- ESPECIALIDADES -->
+
+<section class="especialidades" id="especialidades">
+
+    <h2>Nuestras Especialidades</h2>
+
+    <div class="especialidades-grid">
+
+        <div class="especial-card">
+            <i class="fas fa-drumstick-bite"></i>
+            <h3>Carnes Angus</h3>
+            <p>
+                Cortes premium seleccionados cuidadosamente.
+            </p>
+        </div>
+
+        <div class="especial-card">
+            <i class="fas fa-wine-glass"></i>
+            <h3>Vinos Exclusivos</h3>
+            <p>
+                Amplia selección de vinos internacionales.
+            </p>
+        </div>
+
+        <div class="especial-card">
+            <i class="fas fa-star"></i>
+            <h3>Chef Profesional</h3>
+            <p>
+                Experiencia gastronómica de alto nivel.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
 <!-- GALERIA -->
 
 <section class="galeria" id="galeria">
@@ -120,6 +195,24 @@
         <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200&auto=format&fit=crop">
 
         <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200&auto=format&fit=crop">
+
+    </div>
+
+</section>
+
+<!-- VIDEO -->
+
+<section class="video-section">
+
+    <h2>Conoce Nuestro Restaurante</h2>
+
+    <div class="video-container">
+
+        <iframe 
+        src="https://www.youtube.com/embed/tgbNymZ7vqY"
+        title="YouTube video"
+        allowfullscreen>
+        </iframe>
 
     </div>
 
@@ -143,7 +236,9 @@
 
 </section>
 
-<section class="testimonios">
+<!-- TESTIMONIOS -->
+
+<section class="testimonios" id="testimonios">
 
     <h2>Lo Que Dicen Nuestros Clientes</h2>
 
@@ -173,6 +268,7 @@
     </div>
 
 </section>
+
 <!-- RESERVAS -->
 
 <section class="reservas" id="reservas">
@@ -189,9 +285,21 @@
 
         <button type="submit">Reservar</button>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
     </form>
+
+</section>
+
+<!-- MAPA -->
+
+<section class="mapa">
+
+    <h2>Ubicación</h2>
+
+    <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18"
+    allowfullscreen=""
+    loading="lazy">
+    </iframe>
 
 </section>
 
@@ -199,17 +307,95 @@
 
 <footer>
 
-    <p>
-        © 2026 Velvet Steakhouse | Diseño Profesional
-    </p>
+    <div class="footer-content">
+
+        <div>
+            <h3>Velvet Steakhouse</h3>
+            <p>Experiencia gastronómica premium.</p>
+        </div>
+
+        <div>
+            <h3>Horarios</h3>
+            <p>Lunes - Domingo</p>
+            <p>6:00 PM - 12:00 AM</p>
+        </div>
+
+        <div>
+            <h3>Redes</h3>
+
+            <div class="socials">
+
+                <i class="fab fa-facebook"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-tiktok"></i>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </footer>
 
-<script src="script.js"></script>
+<!-- BOTON WHATSAPP -->
 
-<a href="https://wa.me/573001112233" class="whatsapp" target="_blank">
+<a href="#" class="whatsapp">
     <i class="fab fa-whatsapp"></i>
 </a>
-<script src="https://unpkg.com/scrollreveal"></script>
+<a href="https://wa.me/573138213136" class="whatsapp" target="_blank">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- SCRIPT -->
+
+<script>
+
+window.addEventListener("load", () => {
+
+    setTimeout(() => {
+
+        document.getElementById("loader").style.opacity = "0";
+
+        setTimeout(() => {
+            document.getElementById("loader").style.display = "none";
+        }, 500);
+
+    }, 1500);
+
+});
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+    counter.innerText = "0";
+
+    const updateCounter = () => {
+
+        const target = +counter.getAttribute("data-target");
+        const c = +counter.innerText;
+
+        const increment = target / 200;
+
+        if(c < target){
+
+            counter.innerText = `${Math.ceil(c + increment)}`;
+
+            setTimeout(updateCounter, 10);
+
+        } else {
+
+            counter.innerText = target;
+
+        }
+
+    };
+
+    updateCounter();
+
+});
+
+</script>
+
 </body>
 </html>
